@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+ <div class="circle"></div>
+  <header>
+    <h1 id="header-text">Tic-Tac-Toe</h1>
+    <button id="home-button" onclick="goToHomePage()">Home Page</button>
+    <button id="musicButton" onclick="toggleBackgroundMusic()">Play Music</button>
+  </header>
+  <div class="game-container">
+    <div class="popup" id="game-mode-popup">
+      <div class="popup-content">
+        <h2>Choose Game Mode</h2>
+        <button onclick="startSinglePlayerGame()">Single Player</button>
+        <button onclick="startTwoPlayerGame()">Two Player</button>
+      </div>
+    </div>
+    <div class="popup" id="player-input-popup">
+      <div class="popup-content">
+        <h2 id="player-input-heading">Enter Your Name</h2>
+        <label for="player1">Player 1 Name:</label>
+        <input type="text" id="player1" placeholder="Enter Player 1 name" required>
+        <label for="player2" id="player2-label" style="display:none;">Player 2 Name:</label>
+        <input type="text" id="player2" placeholder="Enter Player 2 name" style="display:none;" required>
+        <button onclick="startGame()">Start Game</button>
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popup-message"></h2>
+        <button class="new-game-btn" onclick="newGame()">Start New Game</button>
+      </div>
+    </div>
+    <div class="board" id="board"></div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Tic-Tac-Toe by Prathamesh. All rights reserved.</p>
+  </footer>
+  <audio id="winnerAudio" src="winner.mp3"></audio>
+  <audio id="sound1Audio" src="sound1.mp3"></audio>
+  <audio id="sound2Audio" src="sound2.mp3"></audio>
+
+
+  <!-- script section -->
+  <script src="script.js"></script>
+  <script>
+    let backgroundMusic = new Audio('bgmusic.mp3');
+    let isMusicPlaying = false;
+    
+    function toggleBackgroundMusic() {
+      const musicButton = document.getElementById('musicButton');
+    
+      if (isMusicPlaying) {
+        backgroundMusic.pause();
+        backgroundMusic.currentTime = 0;
+        isMusicPlaying = false;
+        musicButton.textContent = 'Play Music';
+      } else {
+
+        backgroundMusic.play();
+        isMusicPlaying = true;
+        musicButton.textContent = 'Stop Music';
+      }
+    }
+    </script>
+</body>
+</html>
