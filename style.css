@@ -196,7 +196,7 @@ body {
   footer{
     text-align: center;
     color: #fff;
-    position: absolute;
+    position: fixed;
     bottom: 30px;
   }
   
