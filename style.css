@@ -195,9 +195,13 @@ body {
   
   footer{
     text-align: center;
-    color: #fff;
+    color: #3c3c3c95;
     position: fixed;
     bottom: 30px;
+  }
+
+  footer span{
+    color: #4f4f4f;
   }
   
   /* Media Queries for Responsive Design */
