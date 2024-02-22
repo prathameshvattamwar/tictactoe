@@ -8,7 +8,6 @@
     <li>Home button</li>
   </ul>
   <p>Preview Video</p>
-  <blockquote class="imgur-embed-pub" lang="en" data-id="a/ks9btVF" data-context="false" ><a href="//imgur.com/a/ks9btVF"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
   <video src="https://i.imgur.com/ks9btVF.mp4" alt="Preview Video" muted autoplay></video>
   <a href="https://i.imgur.com/ks9btVF.mp4">Click here if preview not working</a>
   
